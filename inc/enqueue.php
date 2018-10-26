@@ -6,9 +6,12 @@ function ac_scripts() {
    
    /* Register Styles */
    wp_enqueue_style('boostrap-style', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', array(), '4.1.3');
+   wp_enqueue_style('fontawesome-style', 'https://use.fontawesome.com/releases/v5.4.1/css/all.css', array(), '4.1.3');
+
    
    /* Enqueue Styles */
    wp_enqueue_style('bootstrap-style');
+   wp_enqueue_style('fontawesome-style');
    wp_enqueue_style( 'ac-style', get_stylesheet_uri() );
 
 
