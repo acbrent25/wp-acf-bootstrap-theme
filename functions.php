@@ -116,11 +116,15 @@ function ac_widgets_init() {
 }
 add_action( 'widgets_init', 'ac_widgets_init' );
 
-
+add_filter( 'https_ssl_verify', '__return_false' );
 /**
  * Enqueue Scripts
  */
 require get_template_directory() . '/inc/enqueue.php';
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
 
 /**
  * Implement the Custom Header feature.
