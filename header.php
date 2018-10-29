@@ -27,20 +27,12 @@
 	<header id="masthead" class="site-header">
 
 		<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-      <div class="container">
+        <?php the_custom_logo(); ?>
          <!-- Brand and toggle get grouped for better mobile display -->
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
-         <?php
-			the_custom_logo(); ?>
-         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-         <?php 
-         $ac_description = get_bloginfo( 'description', 'display' );
-			if ( $ac_description || is_customize_preview() ) :
-				?>
-				<!-- <p class="site-description"><?php echo $ac_description; /* WPCS: xss ok. */ ?></p> -->
-			<?php endif; ?>
+         
             <?php
             wp_nav_menu( array(
                'theme_location'    => 'menu-1',

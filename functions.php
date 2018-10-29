@@ -117,11 +117,16 @@ function ac_widgets_init() {
 add_action( 'widgets_init', 'ac_widgets_init' );
 
 add_filter( 'https_ssl_verify', '__return_false' );
+
+
 /**
  * Enqueue Scripts
  */
 require get_template_directory() . '/inc/enqueue.php';
+
 add_action( 'wp_enqueue_scripts', 'ac_scripts' );
+
+
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
